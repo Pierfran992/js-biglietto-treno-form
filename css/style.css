@@ -29,9 +29,14 @@ header, footer {
     height: calc(100% - 50px);
 }
 
-.ms_ticket_info {
+.ms_ticket_info, .ms_ticket_slot {
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 30px;
+}
+
+.ms_ticket {
+    background-color: #fff;
+    color: #000000;
 }
 
 input, select {
