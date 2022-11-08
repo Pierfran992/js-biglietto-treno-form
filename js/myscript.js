@@ -23,15 +23,8 @@ const msCelUser = document.getElementById("ms_cel_user");
 const msSlotCel = document.getElementById("ms_slot_cel");
 
 // Calcolare il prezzo del biglietto in base ai dati inseriti dall'user
-let kmUser = document.getElementById("ms_km_user").value;
-
-let priceKm = 0.21; 
-
-let price = kmUser * priceKm;
 
 const msPriceTicket = document.getElementById("ms_price_ticket");
-
-
 
 const myButton = document.querySelector("#ms_make_ticket");
 
@@ -47,13 +40,40 @@ myButton.addEventListener("click",
 
         msSlotCel.innerHTML = msCelUser.value;
 
-        msPriceTicket.innerHTML = price + "€";
+        let msAgeUser = document.getElementById("ms_age_user").value;
+
+        let kmUser = document.getElementById("ms_km_user").value;
+
+        let priceKm = 0.21;
+
+        let price, finalPrice;
+
+        if (msAgeUser === "minorenne") { // se l'età dell'user è < di 18 allora applica uno sconto del 20%
+
+            price = kmUser * priceKm;
+
+            price -= price * 0.2;
+
+            finalPrice = price.toFixed(2);
+
+        } else if (msAgeUser === "maggiorenne") { // se l'età dell'user è >= a 18 e <= a 65 allora il prezzo per km è 0.21€/km
+
+            price = kmUser * priceKm;
+
+            finalPrice = price.toFixed(2);
+
+        } else if(msAgeUser === "senior") { // se l'età dell'user è > di 65 allora applica uno sconto del 40%
+
+            price = kmUser * priceKm;
+
+            price -= price * 0.4;
+
+            finalPrice = price.toFixed(2);
+
+        }
+
+        msPriceTicket.innerHTML = finalPrice;
+
     }
 
 );
-
-// se l'età dell'user è >= a 18 e <= a 65 allora il prezzo per km è 0.21€/km
-
-// se l'età dell'user è < di 18 allora applica uno sconto del 20%
-
-// se l'età dell'user è > di 65 allora applica uno sconto del 40%
