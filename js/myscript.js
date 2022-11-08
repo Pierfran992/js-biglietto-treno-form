@@ -23,6 +23,16 @@ const msCelUser = document.getElementById("ms_cel_user");
 const msSlotCel = document.getElementById("ms_slot_cel");
 
 // Calcolare il prezzo del biglietto in base ai dati inseriti dall'user
+let kmUser = document.getElementById("ms_km_user").value;
+
+let priceKm = 0.21; 
+
+let price = kmUser * priceKm;
+
+const msPriceTicket = document.getElementById("ms_price_ticket");
+
+
+
 const myButton = document.querySelector("#ms_make_ticket");
 
 myButton.addEventListener("click",
@@ -36,6 +46,8 @@ myButton.addEventListener("click",
         msSlotAddress.innerHTML = msAddressUser.value;
 
         msSlotCel.innerHTML = msCelUser.value;
+
+        msPriceTicket.innerHTML = price + "€";
     }
 
 );
