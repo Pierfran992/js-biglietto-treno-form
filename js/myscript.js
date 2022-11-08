@@ -32,6 +32,10 @@ myButton.addEventListener("click",
 
     function(){
 
+        // regole per far apparire il biglietto
+        document.querySelector(".ms_ticket_slot").style.display = "block";
+
+        // regole per inserire i dati dell'user nei campi del biglietto
         msSlotName.innerHTML = msNameUser.value;
 
         msSlotSecondName.innerHTML= msSecondNameUser.value;
@@ -40,6 +44,21 @@ myButton.addEventListener("click",
 
         msSlotCel.innerHTML = msCelUser.value;
 
+        // numero carrozza
+        const msCarriage = document.querySelector(".ms_carriage");
+
+        let carriage = Math.floor((Math.random() * 10) + 1);
+
+        msCarriage.innerHTML = carriage;
+
+        // codice cp
+        const msCodCp = document.querySelector(".ms_cod_cp");
+
+        let codCp = Math.floor ((Math.random() * 100000) + 1);
+
+        msCodCp.innerHTML = codCp;
+
+        // dati per creazione biglietto
         let msAgeUser = document.getElementById("ms_age_user").value;
 
         let kmUser = document.getElementById("ms_km_user").value;
@@ -48,6 +67,7 @@ myButton.addEventListener("click",
 
         let price, finalPrice;
 
+        // creazione prezzo biglietto
         if (msAgeUser === "minorenne") { // se l'età dell'user è < di 18 allora applica uno sconto del 20%
 
             price = kmUser * priceKm;
@@ -77,3 +97,20 @@ myButton.addEventListener("click",
     }
 
 );
+
+// reset biglietto
+const myReset = document.getElementById("ms_reset_ticket");
+
+myReset.addEventListener("click",
+
+    function() {
+
+        // regole per far scomparire il biglietto
+        document.querySelector(".ms_ticket_slot").style.display = "none";
+
+        // regole per resettare il form
+        document.getElementById("ms_my_form").reset();
+
+    }
+
+)
