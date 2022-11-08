@@ -50,6 +50,7 @@
 
             <div class="container p-3">
 
+                <!-- form per la creazione del biglietto -->
                 <div class="ms_ticket_info mt-4 p-3">
                     
                     <h2> <em>"Non è la destinazione, ma il viaggio che conta"</em> </h2>
@@ -109,31 +110,104 @@
 
                 </div>
                 
+                <!-- container del biglietto -->
                 <div class="ms_ticket_slot mt-4 p-3">
 
-                    <div class="ms_ticket">
+                    <div class="container-fluid ms_ticket">
 
-                        <div class="ms_slot_identity_user">
+                        <div class="col p-3">
 
-                            <span id="ms_slot_name"></span>
+                            <div class="ms_slot_logo_ticket">
 
-                            <br>
+                                <img src="img/Logo.png" alt="logo" id="ms_logo_ticket">
 
-                            <span id="ms_slot_second_name"></span>
+                                <span id="ms_title_ticket">Boolean Train</span>
 
-                            <br>
+                            </div>
 
-                            <span id="ms_slot_address"></span>
-
-                            <br>
-
-                            <span id="ms_slot_cel"></span>
+                            <hr>
 
                         </div>
 
-                        <div class="ms_price_seat_ticket">
+                        <div class="row p-3">
 
-                            <span id="ms_price_ticket"></span>
+                            <div class="col-7">
+
+                                <div class="ms_slot_identity_user p-3 d-flex justify-content-evenly align-items-center">
+
+                                    <div>
+
+                                        <span>Nome e Cognome:</span>
+
+                                        <br>
+
+                                        <span id="ms_slot_name"></span>
+
+                                        <span id="ms_slot_second_name"></span>
+
+                                    </div>
+
+                                    <div>
+
+                                        <span>Indirizzo:</span>
+
+                                        <br>
+
+                                        <span id="ms_slot_address"></span>
+
+                                    </div>
+
+                                    <div>
+
+                                        <span>Contatti:</span>
+
+                                        <br>
+
+                                        <span id="ms_slot_cel"></span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-5">
+
+                                <div class="ms_price_seat_ticket p-3 d-flex justify-content-evenly align-items-center">
+
+                                    <div>
+
+                                        <span>Carrozza:</span>
+
+                                        <br>
+
+                                        
+
+                                    </div>
+
+                                    <div>
+
+                                        <span>Codice CP:</span>
+
+                                        <br>
+
+                                        
+
+                                    </div>
+
+                                    <div>
+
+                                        <span>Prezzo:</span>
+
+                                        <br>
+
+                                        <span id="ms_price_ticket"></span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
 
                         </div>
 

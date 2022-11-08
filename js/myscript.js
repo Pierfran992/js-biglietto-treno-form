@@ -72,7 +72,7 @@ myButton.addEventListener("click",
 
         }
 
-        msPriceTicket.innerHTML = finalPrice;
+        msPriceTicket.innerHTML = finalPrice + "€";
 
     }
 
