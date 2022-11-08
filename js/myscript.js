@@ -2,21 +2,28 @@
 
 /*Nota bene il prezzo finale del biglietto non deve contenere più di 2 cifre decimali */
 
-// Inserisci il tuo nome
+// nome
+const msNameUser = document.getElementById("ms_name_user");
 
+const msSlotName = document.getElementById("ms_slot_name");
 
+// cognome
+const msSecondNameUser = document.getElementById("ms_second_name_user");
 
-// Inserisci il tuo cognome
+const msSlotSecondName = document.getElementById("ms_slot_name");
 
-// Inserisci il tuo indirizzo
+// indirizzo
+const msAddressUser = document.getElementById("ms_address_user");
 
-// Inserisci il tuo numero di cellulare
+const msSlotAddress = document.getElementById("ms_slot_address");
 
-// Inserisci la tua età
+// numero di cellulare
+const msCelUser = document.getElementById("ms_cel_user");
 
-// Inserisci i km che devi percorrere
+const msSlotCel = document.getElementById("ms_slot_cel");
 
 // Calcolare il prezzo del biglietto in base ai dati inseriti dall'user
+const myButton = document.querySelector("#ms_make_ticket");
 
 // se l'età dell'user è >= a 18 e <= a 65 allora il prezzo per km è 0.21€/km
 
