@@ -10,7 +10,7 @@ const msSlotName = document.getElementById("ms_slot_name");
 // cognome
 const msSecondNameUser = document.getElementById("ms_second_name_user");
 
-const msSlotSecondName = document.getElementById("ms_slot_name");
+const msSlotSecondName = document.getElementById("ms_slot_second_name");
 
 // indirizzo
 const msAddressUser = document.getElementById("ms_address_user");
@@ -24,6 +24,21 @@ const msSlotCel = document.getElementById("ms_slot_cel");
 
 // Calcolare il prezzo del biglietto in base ai dati inseriti dall'user
 const myButton = document.querySelector("#ms_make_ticket");
+
+myButton.addEventListener("click",
+
+    function(){
+
+        msSlotName.innerHTML = msNameUser.value;
+
+        msSlotSecondName.innerHTML= msSecondNameUser.value;
+
+        msSlotAddress.innerHTML = msAddressUser.value;
+
+        msSlotCel.innerHTML = msCelUser.value;
+    }
+
+);
 
 // se l'età dell'user è >= a 18 e <= a 65 allora il prezzo per km è 0.21€/km
 
