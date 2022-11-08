@@ -25,12 +25,19 @@ header, footer {
 .ms_home_page {
     background-image: url(../img/glacier_express_grisons_switzerland-1920x1080.jpg);
     background-size: cover;
-    /* height: calc(100% - 150px); */
+    width: 100%;
+    height: calc(100% - 50px);
 }
 
 .ms_ticket_info {
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 30px;
+}
+
+input, select {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 10px;
 }
 
 /* footer rules */
